@@ -19,7 +19,7 @@ supervisor.rpcinterface_factory=supervisor.rpcinterface:make_main_rpcinterface
 
 
 [program:memcached]
-command = ${memcached:location}/bin/memcached -v -p ${config:memcached-port} -U ${config:memcached-port} -m ${config:memcached-memory}
+command = ${memcached:location}/bin/memcached -v -p ${config:memcached-port} -U ${config:memcached-port} -m ${config:memcached-memory} -l 127.0.0.1
 process_name = memcached
 directory = ${memcached:location}
 priority = 10

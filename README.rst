@@ -17,11 +17,26 @@ Install python 2.7:
 
 Needed libs:
 ::
-   sudo port install libiconv expat
+   sudo port install libxml2 libxslt libiconv expat
 
 If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
 ::
    sudo port install docutils texlive texlive-latex-extra
+
+Ubuntu/Debian
+-----------------------
+
+Install python 2.7:
+::
+   apt-get install python2.7
+
+Needed libs:
+::
+   apt-get install install libxml2-dev libxslt1-dev expat
+
+If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
+::
+   apt-get install docutils texlive texlive-latex-extra
 
 
    
