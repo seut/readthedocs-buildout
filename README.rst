@@ -2,8 +2,29 @@
  Buildout for readthedocs
 ==========================
 
-This buildout will install readthedocs, including memcached and solr.
+This buildout will install readthedocs, including memcached, redis and solr.
 
+Prerequisites
+=============
+
+OSX Lion using macports
+-----------------------
+
+Install python 2.7:
+::
+   sudo port -v install python27
+   sudo port -v select python python27
+
+Needed libs:
+::
+   sudo port install libiconv expat
+
+If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
+::
+   sudo port install docutils texlive texlive-latex-extra
+
+
+   
 Install
 =======
 Boostrap buildout (using distribute):
@@ -14,11 +35,16 @@ Run buildout, installing all parts.
 ::
    bin/buildout -vv
 
-Start all daemons (supervisor)
-==============================
+Control all daemons using supervisor
+====================================
+
+Start the supervisor daemon (start all daemons)
 ::
    bin/supervisord
 
+Stop the supervisor daemon (stop all daemons)
+::
+   bin/supervisorctl shutdown
 
 
 Setup readthedoc
@@ -43,7 +69,7 @@ Generate the schema.xml file:
 ::
    bin/manage build_solr_schema > parts/solr/solr/conf/schema.xml
 
-Restart solr::
+Restart solr:
 ::
    bin/supervisorctl restart solr
 
