@@ -21,7 +21,7 @@ Needed libs:
 
 If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
 ::
-   sudo port install docutils texlive texlive-latex-extra
+   sudo port install texlive texlive-latex-extra
 
 Ubuntu/Debian
 -----------------------
@@ -36,7 +36,7 @@ Needed libs:
 
 If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
 ::
-   apt-get install docutils texlive texlive-latex-extra
+   apt-get install texlive texlive-latex-extra
 
 
    
