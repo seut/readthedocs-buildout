@@ -32,7 +32,7 @@ Install python 2.7:
 
 Needed libs:
 ::
-   apt-get install libxml2-dev libxslt1-dev expat python-dev eventlib-dev
+   apt-get install libxml2-dev libxslt1-dev expat python-dev eventlib-dev python-virtualenv
 
 If you want readthedocs to generate PDF files (be ware, lots of dependencies!):
 ::
